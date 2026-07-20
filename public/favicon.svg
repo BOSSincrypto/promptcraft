@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#818cf8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Terminal window background -->
+  <rect x="4" y="12" width="56" height="44" rx="6" fill="url(#bg)" />
+  
+  <!-- Terminal title bar -->
+  <rect x="4" y="12" width="56" height="12" rx="6" fill="#4f46e5" />
+  <rect x="4" y="18" width="56" height="6" fill="#4f46e5" />
+  
+  <!-- Terminal dots -->
+  <circle cx="14" cy="18" r="2.5" fill="#f87171" />
+  <circle cx="22" cy="18" r="2.5" fill="#fbbf24" />
+  <circle cx="30" cy="18" r="2.5" fill="#34d399" />
+  
+  <!-- Lightbulb shape -->
+  <path d="M32 28 C32 28 26 32 26 38 C26 42 29 44 32 44 C35 44 38 42 38 38 C38 32 32 28 32 28 Z" fill="#fbbf24" />
+  
+  <!-- Lightbulb base -->
+  <rect x="29" y="44" width="6" height="2" fill="#d97706" />
+  <rect x="30" y="46" width="4" height="2" fill="#d97706" />
+  
+  <!-- Brain/terminal lines -->
+  <path d="M20 30 L24 30" stroke="#818cf8" stroke-width="2" stroke-linecap="round" />
+  <path d="M20 34 L22 34" stroke="#818cf8" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- Lightning bolt (ideas) -->
+  <path d="M44 28 L42 34 L44 34 L42 40" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+</svg>
