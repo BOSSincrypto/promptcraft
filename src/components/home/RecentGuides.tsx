@@ -17,9 +17,9 @@ interface RecentGuide {
 
 const recentGuides: RecentGuide[] = [
   {
-    slug: 'gpt-4',
-    title: 'GPT-4 Guide',
-    description: 'Master prompt engineering for OpenAI\'s most capable model.',
+    slug: 'gpt-5.5',
+    title: 'GPT-5.5 Guide',
+    description: 'Master outcome-first prompting for OpenAI\'s 2026 flagship.',
     modelType: 'llms',
     lastUpdated: Date.now() - 86400000 * 7,
   },

@@ -1,61 +1,104 @@
 ---
-title: "Gemini Prompting"
-description: "Optimize prompts specifically for Google Gemini models"
+title: "Gemini 3.5 Prompting"
+description: "Optimize prompts for Google's 2026 Gemini models"
 category: model-specific
 difficulty: intermediate
 estimatedTime: 15
 order: 3
-tags: ["gemini", "google", "model-specific"]
+tags: ["gemini", "google", "gemini-3.5", "model-specific", "2026"]
 ---
 
-# Gemini Prompting
+# Gemini 3.5 Prompting
 
-Google Gemini models have unique features for effective prompting.
+Gemini 3.5 Flash (May 2026) is Google's fast multimodal model with **1M token context** and **thinking levels** for controlled reasoning depth.
 
 ## Gemini Strengths
 
-- Multimodal capabilities (text, image, audio)
-- Strong integration with Google ecosystem
-- Good at research and analysis
-- Supports large context windows
+- **1M Token Context**: Process entire codebases
+- **Native Multimodal**: Text, images, video, audio
+- **Thinking Levels**: Control reasoning depth (low/medium/high)
+- **Schema-Based Outputs**: Define strict JSON schemas inline
+- **Grounded Generation**: Web search for factual accuracy
 
 ## Best Practices for Gemini
 
-### 1. Leverage Multimodal Input
-Combine text and images when relevant.
+### 1. Use Thinking Levels
+Control reasoning depth explicitly:
+```
+Think carefully about this problem: [complex analysis task]
+Quickly classify this: [simple classification]
+```
 
-### 2. Be Specific About Format
-Clearly define output structure.
+### 2. Schema-Based Outputs
+Define strict output schemas:
+```
+Return a JSON object with this exact structure:
+{
+  "findings": [{"severity": "high|medium|low", "description": "..."}],
+  "score": 0-100,
+  "summary": "..."
+}
+```
 
-### 3. Use Clear Examples
-Provide concrete examples for better results.
+### 3. Leverage Multimodal
+Combine text, images, and code:
+```
+[Attach screenshot of error]
+[Attach code file]
+This code produces the error shown. Analyze both and fix.
+```
+
+### 4. Grounded Generation
+Use web search for current information:
+```
+What are the latest developments in quantum computing?
+Use web search for information from the past 3 months.
+```
+
+## Model Variants (July 2026)
+
+| Model | Best For | Price |
+|-------|----------|-------|
+| **Flash** | Fast, affordable | $1.50/$9 |
+| **Pro** | Deep reasoning | $2/$12 |
+| **Deep Think** | Complex analysis | Premium |
 
 ## Example
 
 ```python
-prompt = """
-Analyze this image and text together:
+# Gemini-optimized prompt with schema
+prompt = """Analyze this code and return a JSON report:
 
-Image: [product photo]
-Text: "This product broke after one day of use."
+{
+  "issues": [{"type": "bug|security|performance", "severity": "high|medium|low", "description": "...", "fix": "..."}],
+  "complexity_score": 1-10,
+  "recommendations": ["..."]
+}
 
-Provide:
-1. Visual description of damage
-2. Text sentiment analysis
-3. Combined assessment
-4. Recommended action
-"""
+Code to analyze:
+[paste code]"""
 ```
 
 ## Quiz
 
 <Quiz
-  question="What makes Gemini unique compared to other models?"
+  question="What are Gemini's 'thinking levels'?"
   options={[
-    "It's the fastest model",
-    "It has multimodal capabilities",
-    "It's the cheapest to use",
-    "It only works with text"
+    "Temperature settings",
+    "Controls for reasoning depth (low/medium/high)",
+    "Output length limits",
+    "Token count restrictions"
+  ]}
+  correct={1}
+/>
+
+<Quiz
+  question="What is 'grounded generation' in Gemini?"
+  options={[
+    "Generating images from text",
+    "Using web search for factual accuracy",
+    "Offline content generation",
+    "Code execution"
   ]}
   correct={1}
 />

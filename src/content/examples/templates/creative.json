@@ -6,7 +6,7 @@
       "title": "Story Generator",
       "description": "Generate creative stories with specific elements and themes.",
       "category": "creative",
-      "model": "gpt-4",
+      "model": "gpt-5.5",
       "content": "Write a {{genre}} story with the following elements:\n- Setting: {{setting}}\n- Main character: {{character}}\n- Conflict: {{conflict}}\n- Theme: {{theme}}\n- Tone: {{tone}}\n\nThe story should be {{length}} and include:\n- Vivid descriptions\n- Engaging dialogue\n- A satisfying conclusion\n- At least one plot twist",
       "variables": [
         {
@@ -62,7 +62,7 @@
       "title": "Poetry Generator",
       "description": "Generate poems in various styles and forms.",
       "category": "creative",
-      "model": "gpt-4",
+      "model": "gpt-5.5",
       "content": "Write a {{poem_type}} poem about {{topic}} in the style of {{style}}. The poem should:\n- Use {{imagery}} imagery\n- Evoke {{emotion}} emotions\n- Include {{element}} as a central motif\n- Be approximately {{length}} lines long",
       "variables": [
         {

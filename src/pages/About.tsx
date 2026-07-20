@@ -45,7 +45,7 @@ export function About() {
             <h2 className="text-xl font-semibold">Model Guides</h2>
           </div>
           <p className="text-muted-foreground">
-            Comprehensive guides for GPT-4, Claude, Gemini, Midjourney, and more. 
+            Comprehensive guides for GPT-5.5, Claude Fable 5, Gemini 3.5, Midjourney V8.1, and more. 
             Learn model-specific best practices and techniques.
           </p>
         </Card>

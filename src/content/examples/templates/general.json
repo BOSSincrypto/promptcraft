@@ -6,7 +6,7 @@
       "title": "Concept Explainer",
       "description": "Explain complex concepts in simple terms with examples.",
       "category": "general",
-      "model": "gpt-4",
+      "model": "gpt-5.5",
       "content": "Explain {{concept}} to someone who is {{audience}}.\n\nUse the following approach:\n1. Simple definition (1-2 sentences)\n2. Real-world analogy\n3. Key components or principles\n4. Common examples\n5. Why it matters\n6. Common misconceptions\n\nTone: {{tone}}\nDepth: {{depth}}",
       "variables": [
         {
@@ -44,7 +44,7 @@
       "title": "Project Planner",
       "description": "Create detailed project plans with timelines and milestones.",
       "category": "general",
-      "model": "gpt-4",
+      "model": "gpt-5.5",
       "content": "Create a project plan for {{project}}.\n\nDetails:\n- Team size: {{team_size}}\n- Timeline: {{timeline}}\n- Budget: {{budget}}\n- Resources: {{resources}}\n\nPlease include:\n1. Project overview and objectives\n2. Work breakdown structure\n3. Timeline with milestones\n4. Resource allocation\n5. Risk assessment\n6. Success metrics\n7. Communication plan",
       "variables": [
         {

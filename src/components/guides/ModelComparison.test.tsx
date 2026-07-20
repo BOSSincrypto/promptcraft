@@ -5,7 +5,7 @@ import type { ModelComparison as ModelComparisonType } from '../../types';
 describe('ModelComparison', () => {
   const comparisons: ModelComparisonType[] = [
     {
-      modelA: 'GPT-4',
+      modelA: 'GPT-5.5',
       modelB: 'Claude-3.5',
       criteria: [
         { name: 'Reasoning', scoreA: 9, scoreB: 8 },
@@ -21,7 +21,7 @@ describe('ModelComparison', () => {
 
   it('renders model names', () => {
     render(<ModelComparison comparisons={comparisons} />);
-    expect(screen.getByText('GPT-4 vs Claude-3.5')).toBeInTheDocument();
+    expect(screen.getByText('GPT-5.5 vs Claude-3.5')).toBeInTheDocument();
   });
 
   it('renders criteria names', () => {

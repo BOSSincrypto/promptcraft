@@ -6,7 +6,7 @@
       "title": "Data Analysis Assistant",
       "description": "Analyze data and provide insights with visualizations suggestions.",
       "category": "analysis",
-      "model": "gpt-4",
+      "model": "gpt-5.5",
       "content": "Analyze the following data about {{topic}}:\n{{data}}\n\nPlease provide:\n1. Key findings and patterns\n2. Statistical analysis\n3. Trends and correlations\n4. Potential insights\n5. Recommended visualizations\n6. Actionable recommendations\n\nContext: {{context}}\nTarget audience: {{audience}}",
       "variables": [
         {
@@ -44,7 +44,7 @@
       "title": "Research Synthesizer",
       "description": "Synthesize research from multiple sources into coherent insights.",
       "category": "analysis",
-      "model": "gpt-4",
+      "model": "gpt-5.5",
       "content": "Synthesize the following research about {{topic}}:\n{{sources}}\n\nPlease create:\n1. Executive summary\n2. Key themes and findings\n3. Methodology assessment\n4. Gaps in research\n5. Contradictions or debates\n6. Future research directions\n\nFocus area: {{focus}}\nFormat: {{format}}",
       "variables": [
         {

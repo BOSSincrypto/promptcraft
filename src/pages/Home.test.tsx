@@ -32,7 +32,7 @@ describe('Home', () => {
   it('renders recent guides section', () => {
     render(<Home />);
     expect(screen.getByText('Recent Guides')).toBeInTheDocument();
-    expect(screen.getByText('GPT-4 Guide')).toBeInTheDocument();
+    expect(screen.getByText('GPT-5.5 Guide')).toBeInTheDocument();
     expect(screen.getByText('Midjourney Guide')).toBeInTheDocument();
   });
 

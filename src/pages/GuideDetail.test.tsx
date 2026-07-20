@@ -18,14 +18,14 @@ const mockGetGuide = vi.mocked(getGuide);
 const mockGetGuidesByType = vi.mocked(getGuidesByType);
 
 const mockGuide: Guide = {
-  title: 'GPT-4 Guide',
-  description: 'A guide for GPT-4',
+  title: 'GPT-5.5 Guide',
+  description: 'A guide for GPT-5.5',
   modelType: 'llms',
-  modelSlug: 'gpt-4',
+  modelSlug: 'gpt-5.5',
   lastUpdated: Date.now(),
   icon: 'Bot',
   color: 'blue',
-  content: '# GPT-4 Guide\n\nThis is a guide for GPT-4.',
+  content: '# GPT-5.5 Guide\n\nThis is a guide for GPT-5.5.',
   tips: [
     {
       title: 'Best Practice',
@@ -51,7 +51,7 @@ const mockGuides: Guide[] = [
   },
 ];
 
-const renderWithRouter = (ui: React.ReactElement, { route = '/guides/gpt-4' } = {}) => {
+const renderWithRouter = (ui: React.ReactElement, { route = '/guides/gpt-5.5' } = {}) => {
   return render(
     <MemoryRouter initialEntries={[route]}>
       <Routes>
@@ -89,8 +89,8 @@ describe('GuideDetail', () => {
   it('renders guide content after loading', async () => {
     renderWithRouter(<GuideDetail />);
     await waitFor(() => {
-      expect(screen.getAllByText('GPT-4 Guide').length).toBeGreaterThan(0);
-      expect(screen.getByText('A guide for GPT-4')).toBeInTheDocument();
+      expect(screen.getAllByText('GPT-5.5 Guide').length).toBeGreaterThan(0);
+      expect(screen.getByText('A guide for GPT-5.5')).toBeInTheDocument();
     });
   });
 

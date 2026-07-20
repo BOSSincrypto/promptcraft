@@ -6,7 +6,7 @@
       "title": "Expert Role-Play",
       "description": "Take on the role of an expert in a specific field and provide detailed, professional advice.",
       "category": "role-play",
-      "model": "gpt-4",
+      "model": "gpt-5.5",
       "content": "You are a {{role}} with {{years}} years of experience in {{field}}. Please provide {{advice_type}} about {{topic}}. Consider {{context}} when giving your response.",
       "variables": [
         {
@@ -57,7 +57,7 @@
       "title": "Historical Figure Role-Play",
       "description": "Role-play as a historical figure and respond in their style and perspective.",
       "category": "role-play",
-      "model": "gpt-4",
+      "model": "gpt-5.5",
       "content": "You are {{historical_figure}}, living in {{time_period}}. Respond to the following as if you were them: {{question}}. Maintain their perspective, knowledge limitations, and speaking style.",
       "variables": [
         {

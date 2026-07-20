@@ -8,7 +8,7 @@ describe('ExampleGallery', () => {
       title: 'Example 1',
       description: 'First example prompt',
       prompt: 'Write a poem about nature',
-      model: 'gpt-4',
+      model: 'gpt-5.5',
     },
     {
       title: 'Example 2',

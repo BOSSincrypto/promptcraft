@@ -124,23 +124,24 @@ Llama 3 can effectively adopt different roles and expertise levels.
 
 ## Model Comparison
 
-| Feature | Llama 3 | GPT-4 | Claude 3.5 |
-|---------|---------|-------|------------|
+| Feature | Llama 4 | GPT-5.5 | Claude Fable 5 |
+|---------|---------|---------|----------------|
 | Open Source | Yes | No | No |
 | Performance | Good | Excellent | Excellent |
 | Customization | High | Limited | Limited |
 | Cost | Free | Paid | Paid |
-| Context Length | 8K tokens | 128K tokens | 200K tokens |
+| Context Length | 10M tokens | 1M tokens | 1M tokens |
 
-## When to Use Llama 3
+## When to Use Llama 4
 
 - Open-source requirements
 - Cost-sensitive applications
 - Customization and fine-tuning needs
 - Research and experimentation
+- On-premise deployment requirements
 
 ## When to Use Alternatives
 
-- Tasks requiring maximum performance (use GPT-4 or Claude 3.5)
-- Long context requirements (use Claude 3.5 or Gemini Pro)
-- Tasks needing strong safety guardrails (use Claude 3.5)
+- Tasks requiring maximum performance (use Claude Fable 5 or GPT-5.5)
+- Long context requirements (use any flagship model)
+- Tasks needing strong safety guardrails (use Claude Fable 5)

@@ -42,9 +42,9 @@
       "icon": "Cpu",
       "color": "orange",
       "lessons": [
-        "gpt-5.5",
-        "claude-fable-5",
-        "gemini-3.5"
+        "gpt-4",
+        "claude",
+        "gemini"
       ]
     }
   }
