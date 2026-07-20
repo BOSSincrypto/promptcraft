@@ -1,131 +1,136 @@
 ---
-title: "DALL-E 3 Prompt Engineering Guide"
-description: "Master prompt engineering for OpenAI's DALL-E 3 image generation model"
+title: "GPT Image 2 Prompt Engineering Guide"
+description: "Master OpenAI's latest image generation model with superior photorealism"
 modelType: "image-generators"
-modelSlug: "dall-e-3"
-version: "3"
-lastUpdated: 1690000000000
+modelSlug: "gpt-image-2"
+version: "2"
+lastUpdated: 1751356800000
 icon: "Palette"
-color: "secondary"
+color: "blue"
 ---
 
-# DALL-E 3 Prompt Engineering Guide
+# GPT Image 2 Prompt Engineering Guide
 
-DALL-E 3 is OpenAI's advanced image generation model, creating high-quality images from text descriptions. This guide will help you craft effective prompts for DALL-E 3.
+GPT Image 2 (April 2026) is OpenAI's successor to DALL-E 3 and GPT Image 1.5, featuring **superior photorealism**, **excellent text rendering**, and **complex prompt adherence**.
 
 ## Key Features
 
-- **Text to Image**: Generates images from detailed text descriptions
-- **High Quality**: Creates detailed, high-resolution images
-- **Style Control**: Can generate images in various artistic styles
-- **Composition Control**: Understands complex scene compositions
+- **Superior Photorealism**: Industry-leading realistic images
+- **Excellent Text Rendering**: Accurate text in images
+- **Complex Prompt Adherence**: Understands detailed instructions
+- **Style Versatility**: Multiple artistic styles
+- **API Access**: Available via ChatGPT and API
+
+## Access Methods
+
+| Method | Access | Pricing |
+|--------|--------|---------|
+| ChatGPT Plus | Included | $20/month |
+| ChatGPT Pro | Included | $200/month |
+| API | Pay-per-image | ~$0.04-0.12/image |
+
+**Note:** DALL-E 2/3 were removed from the API on May 12, 2026. GPT Image 2 is the current model.
 
 ## Best Practices
 
 ### 1. Be Specific About Details
 
-DALL-E 3 responds well to detailed descriptions of what you want.
-
 **Example:**
 ```
 Instead of: "A cat"
-Use: "A fluffy orange tabby cat sitting on a windowsill, looking out at a rainy city skyline at dusk, photorealistic style, soft lighting"
+Use: "A fluffy orange tabby cat sitting on a windowsill, looking out at a rainy city skyline at dusk, photorealistic style, soft lighting, shallow depth of field"
 ```
 
-### 2. Specify Art Style
-
-Clearly define the artistic style you want.
+### 2. Specify Art Style Clearly
 
 **Example:**
 ```
-"A futuristic cityscape in the style of cyberpunk anime, neon lights reflecting on wet streets, detailed architecture, moody atmosphere"
+"A futuristic cityscape in the style of cyberpunk anime, neon lights reflecting on wet streets, detailed architecture, moody atmosphere, cinematic lighting"
 ```
 
 ### 3. Use Composition Terms
 
-DALL-E 3 understands photographic and artistic composition terms.
+**Example:**
+```
+"Close-up portrait of a wise old wizard, dramatic lighting from the left, shallow depth of field, detailed facial features, magical aura, 8K resolution"
+```
+
+### 4. Text in Images (Major Strength)
 
 **Example:**
 ```
-"Close-up portrait of a wise old wizard, dramatic lighting from the left, shallow depth of field, detailed facial features, magical aura"
+"A coffee shop sign that says 'ARTISAN COFFEE' in elegant cursive, neon glow, nighttime, wet pavement reflection"
 ```
 
-### 4. Provide Context and Mood
-
-Describe the atmosphere and context for better results.
+### 5. Complex Scenes
 
 **Example:**
 ```
-"A cozy coffee shop interior on a rainy afternoon, warm lighting, steaming cups on wooden tables, people reading books, peaceful atmosphere, soft focus background"
+"A busy Japanese street market at night, dozens of people walking, lanterns glowing, steam rising from food stalls, rain-slicked ground reflecting lights, photorealistic, cinematic"
 ```
-
-### 5. Iterate and Refine
-
-Start with a basic description and refine based on results.
-
-**Example:**
-```
-First: "A mountain landscape"
-Then: "A mountain landscape at sunrise, golden hour lighting, snow-capped peaks, alpine meadow with wildflowers, photorealistic"
-```
-
-## Common Pitfalls
-
-1. **Too Vague**: "A picture" gives unpredictable results
-2. **Overly Complex**: Too many conflicting elements can confuse the model
-3. **Ignoring Aspect Ratio**: Specify if you need landscape or portrait orientation
-4. **Copyright Issues**: Avoid requesting images of copyrighted characters
 
 ## Advanced Techniques
 
 ### Style Mixing
 
-Combine multiple artistic styles for unique results.
+Combine multiple artistic styles:
 
-### Prompt Weighting
+**Example:**
+```
+"Watercolor painting style but with cyberpunk elements, neon colors bleeding into traditional Japanese ink wash, futuristic cityscape"
+```
 
-Emphasize certain elements by repeating or elaborating on them.
+### Photo Manipulation Style
 
-### Negative Prompts
+**Example:**
+```
+"Double exposure photograph combining a portrait of a woman with a cityscape silhouette, artistic, ethereal, high contrast"
+```
 
-Specify what you don't want in the image (use with caution).
+### Brand-Consistent Design
+
+**Example:**
+```
+"Product photography of a sleek black wireless earbud on a marble surface, soft studio lighting, minimalist composition, Apple-style aesthetic"
+```
 
 ## Tips for Specific Use Cases
 
 ### Product Photography
-- Specify lighting and background
-- Include details about materials and textures
-- Request clean, professional compositions
+- Specify lighting setup (soft, dramatic, studio)
+- Include material/texture details
+- Use clean backgrounds
 
 ### Concept Art
 - Describe mood and atmosphere
 - Specify art style and influences
-- Include details about composition and focal point
+- Include composition details
 
-### Illustrations
-- Define target audience and purpose
-- Specify color palette and style
-- Include details about characters and setting
+### Marketing Materials
+- Include text elements (headlines, slogans)
+- Specify brand colors and style
+- Request professional, polished look
 
-## Model Comparison
+## Model Comparison (July 2026)
 
-| Feature | DALL-E 3 | Midjourney | Stable Diffusion |
-|---------|----------|------------|-------------------|
-| Text Understanding | Excellent | Good | Moderate |
-| Image Quality | High | Very High | Variable |
-| Style Control | Good | Excellent | Excellent |
-| Ease of Use | Excellent | Good | Moderate |
-| Customization | Limited | Moderate | High |
+| Feature | GPT Image 2 | Midjourney V8.1 | FLUX.2 Pro |
+|---------|-------------|-----------------|------------|
+| Photorealism | Excellent | Good | Excellent |
+| Text Rendering | Excellent | Excellent | Good |
+| Artistic Quality | Good | Excellent | Good |
+| Prompt Adherence | Excellent | Good | Good |
+| API Access | Yes | No (Discord) | Yes |
 
-## When to Use DALL-E 3
+## When to Use GPT Image 2
 
-- Detailed text-to-image generation
-- When you need precise text understanding
-- Quick prototyping of visual concepts
+- Photorealistic images
+- Images with text
+- Complex scene compositions
+- Product photography
 - Commercial use with clear licensing
 
 ## When to Use Alternatives
 
-- When you need maximum artistic control (use Midjourney)
-- For highly customized or fine-tuned results (use Stable Diffusion)
-- For very specific artistic styles (consider specialized models)
+- Maximum artistic control (use Midjourney)
+- Open-source customization (use Stable Diffusion)
+- Budget high-volume (use FLUX.2)

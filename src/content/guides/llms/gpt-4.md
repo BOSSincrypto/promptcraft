@@ -1,131 +1,151 @@
 ---
-title: "GPT-4 Prompt Engineering Guide"
-description: "Master prompt engineering for OpenAI's most capable language model"
+title: "GPT-5.5 Prompt Engineering Guide"
+description: "Master prompt engineering for OpenAI's flagship language model with 1M context"
 modelType: "llm"
-modelSlug: "gpt-4"
-version: "4.0"
-lastUpdated: 1690000000000
+modelSlug: "gpt-5.5"
+version: "5.5"
+lastUpdated: 1753084800000
 icon: "Bot"
 color: "blue"
 ---
 
-# GPT-4 Prompt Engineering Guide
+# GPT-5.5 Prompt Engineering Guide
 
-GPT-4 is OpenAI's most advanced language model, offering improved reasoning, creativity, and instruction following. This guide will help you craft effective prompts to get the best results.
+GPT-5.5 is OpenAI's current flagship model (April 2026), featuring a **1M token context window**, **128K max output**, and state-of-the-art reasoning. GPT-5.6 variants (Sol, Terra, Luna) launched June 2026 in limited preview.
 
 ## Key Features
 
-- **Enhanced Reasoning**: GPT-4 excels at complex logical tasks
-- **Better Instruction Following**: More precise adherence to detailed instructions
-- **Larger Context Window**: Can handle longer conversations and documents
-- **Improved Creativity**: Better at generating creative content
+- **1M Token Context Window**: Process entire codebases and long documents
+- **128K Max Output**: Generate extremely long, coherent responses
+- **Extended Thinking**: Automated chain-of-thought reasoning
+- **Multimodal**: Text, image, and code understanding
+- **Tool Use**: Native function calling and API integration
+
+## Pricing (July 2026)
+
+| Model | Input | Output |
+|-------|-------|--------|
+| GPT-5.5 | $5/1M tokens | $30/1M tokens |
+| GPT-5.5 Pro | $30/1M tokens | $180/1M tokens |
 
 ## Best Practices
 
-### 1. Be Specific and Clear
+### 1. Leverage Extended Thinking
 
-GPT-4 responds well to precise instructions. Avoid vague requests and provide clear context.
-
-**Example:**
-```
-Instead of: "Write a story"
-Use: "Write a 500-word science fiction story about a astronaut discovering an alien artifact on Mars. Include dialogue and descriptive language."
-```
-
-### 2. Use System Messages Effectively
-
-System messages help set the context and behavior for the model.
+GPT-5.5 has built-in extended thinking. For complex reasoning, let the model think before responding.
 
 **Example:**
 ```
-System: You are a professional copywriter with 10 years of experience in tech marketing. Write concise, engaging copy that converts.
+Analyze this business problem and provide a solution. Think through the key factors, constraints, and trade-offs before giving your recommendation.
 
-User: Write a product description for a new noise-cancelling headphone.
+[Problem description here]
 ```
 
-### 3. Provide Examples (Few-Shot Learning)
-
-GPT-4 learns from examples you provide in the prompt.
+### 2. Use System Messages for Role Definition
 
 **Example:**
 ```
-Classify the sentiment of these reviews:
-1. "This product is amazing!" -> Positive
-2. "Terrible quality, broke after one day." -> Negative
-3. "It's okay, nothing special." -> [Your classification here]
+System: You are a senior software architect with 15 years of experience in distributed systems. You think through problems methodically and consider edge cases. You provide actionable, production-ready recommendations.
+
+User: Design a real-time notification system for 10M users.
 ```
 
-### 4. Use Chain-of-Thought Prompting
-
-Ask the model to think step-by-step for complex reasoning tasks.
+### 3. Structured Output with JSON Mode
 
 **Example:**
 ```
-Solve this step by step:
-A store has 15 apples. They sell 8 apples and then receive a shipment of 12 new apples. How many apples do they have now?
+Analyze this code and return a JSON object with:
+{
+  "issues": [{"severity": "high|medium|low", "description": "...", "fix": "..."}],
+  "score": 0-100,
+  "summary": "..."
+}
+
+Code to analyze:
+[paste code]
 ```
 
-### 5. Set Temperature Based on Task
+### 4. Few-Shot with Complex Patterns
 
-- **Temperature 0-0.3**: Factual, deterministic tasks
-- **Temperature 0.4-0.7**: Balanced creativity and accuracy
-- **Temperature 0.8-1.0**: Highly creative tasks
+**Example:**
+```
+Transform user stories into technical requirements:
 
-## Common Pitfalls
+Input: "As a user, I want to reset my password so I can regain access"
+Output: {
+  "endpoint": "POST /api/auth/reset-password",
+  "validation": ["email format", "rate limiting"],
+  "flow": ["validate email", "send reset link", "update password"],
+  "security": ["token expiration", "hash password"]
+}
 
-1. **Too Vague**: "Write something about AI" gives unpredictable results
-2. **Overly Complex**: Too many constraints can confuse the model
-3. **No Context**: Missing background information leads to generic responses
-4. **Ignoring Model Limits**: GPT-4 can't access real-time data or browse the web
+Now transform:
+Input: "As an admin, I want to export user data as CSV for compliance"
+Output:
+```
+
+### 5. Context Window Optimization
+
+With 1M tokens, you can provide extensive context:
+
+**Example:**
+```
+I'm providing you with:
+1. The full codebase (attached)
+2. API documentation (below)
+3. Error logs from production (below)
+4. User requirements (below)
+
+Please analyze the codebase, identify the root cause of the errors, and provide a fix that satisfies the requirements.
+```
 
 ## Advanced Techniques
 
+### Tool Use / Function Calling
+
+```json
+{
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "search_documents",
+        "description": "Search through company documents",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "query": {"type": "string"},
+            "category": {"type": "string", "enum": ["technical", "business", "legal"]}
+          }
+        }
+      }
+    }
+  ]
+}
+```
+
 ### Prompt Chaining
-Break complex tasks into smaller, sequential prompts.
 
-### Meta-Prompting
-Ask the model to generate or improve prompts for you.
+Break complex tasks into sequential steps:
+1. Analyze the input
+2. Generate a plan
+3. Execute the plan step by step
+4. Review and refine
 
-### Structured Output
-Request specific formats like JSON, tables, or lists.
+## Model Comparison (July 2026)
 
-## Tips for Specific Use Cases
+| Feature | GPT-5.5 | Claude Fable 5 | Gemini 3.5 |
+|---------|---------|----------------|------------|
+| Context Window | 1M | 1M | 1M |
+| Max Output | 128K | 32K | 8K |
+| Reasoning | Excellent | Excellent | Strong |
+| Coding | Strong | Best (~95% SWE) | Strong |
+| Price (Input) | $5 | $10 | $1.50 |
 
-### Creative Writing
-- Provide genre, tone, and style examples
-- Use "continue from" to extend existing content
-- Specify word count and structure
+## When to Use GPT-5.5
 
-### Code Generation
-- Specify programming language and framework
-- Include error handling requirements
-- Request comments and documentation
-
-### Analysis and Research
-- Provide source material or context
-- Ask for citations and sources
-- Request structured analysis formats
-
-## Model Comparison
-
-| Feature | GPT-4 | GPT-3.5 |
-|---------|-------|---------|
-| Reasoning | Excellent | Good |
-| Creativity | High | Medium |
-| Context Length | 128K tokens | 16K tokens |
-| Cost | Higher | Lower |
-| Speed | Slower | Faster |
-
-## When to Use GPT-4
-
-- Complex reasoning tasks
-- Creative writing requiring nuance
-- Multi-step problem solving
-- Tasks requiring high accuracy
-- Long document analysis
-
-## When to Use Alternatives
-
-- Simple, straightforward tasks (use GPT-3.5 for cost savings)
-- Real-time data needs (use models with web access)
-- Specialized domain tasks (use domain-specific models)
+- Complex multi-step reasoning tasks
+- Long document analysis and summarization
+- Code generation with extensive context
+- Tasks requiring tool use and API integration
+- Creative writing with specific constraints

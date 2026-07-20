@@ -26,7 +26,7 @@
     },
     "advanced": {
       "title": "Advanced",
-      "description": "Expert-level prompt engineering",
+      "description": "Expert-level prompt engineering & context engineering",
       "order": 3,
       "icon": "Rocket",
       "color": "green",
@@ -37,14 +37,14 @@
     },
     "model-specific": {
       "title": "Model-Specific",
-      "description": "Optimize prompts for specific models",
+      "description": "Optimize prompts for specific models (2026)",
       "order": 4,
       "icon": "Cpu",
       "color": "orange",
       "lessons": [
-        "gpt-4",
-        "claude",
-        "gemini"
+        "gpt-5.5",
+        "claude-fable-5",
+        "gemini-3.5"
       ]
     }
   }

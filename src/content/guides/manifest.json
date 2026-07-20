@@ -5,9 +5,9 @@
     "icon": "Bot",
     "color": "primary",
     "guides": [
-      "gpt-4",
-      "claude-3.5",
-      "gemini-pro",
+      "gpt-5.5",
+      "claude-fable-5",
+      "gemini-3.5",
       "llama-3"
     ]
   },
@@ -18,7 +18,7 @@
     "color": "secondary",
     "guides": [
       "midjourney",
-      "dall-e-3",
+      "gpt-image-2",
       "stable-diffusion",
       "flux"
     ]
@@ -29,7 +29,7 @@
     "icon": "Code2",
     "color": "success",
     "guides": [
-      "github-copilot",
+      "ai-coding-2026",
       "cursor",
       "codestral"
     ]

@@ -1,142 +1,146 @@
 ---
-title: "Claude 3.5 Prompt Engineering Guide"
-description: "Master prompt engineering for Anthropic's advanced language model"
+title: "Claude Fable 5 Prompt Engineering Guide"
+description: "Master prompt engineering for Anthropic's most capable coding model"
 modelType: "llms"
-modelSlug: "claude-3.5"
-version: "3.5"
-lastUpdated: 1690000000000
+modelSlug: "claude-fable-5"
+version: "Fable 5"
+lastUpdated: 1750579200000
 icon: "Bot"
-color: "blue"
+color: "orange"
 ---
 
-# Claude 3.5 Prompt Engineering Guide
+# Claude Fable 5 Prompt Engineering Guide
 
-Claude 3.5 is Anthropic's advanced language model, excelling at nuanced understanding, careful reasoning, and following complex instructions. This guide will help you craft effective prompts for Claude.
+Claude Fable 5 (June 9, 2026) is Anthropic's most capable model with **~95% SWE-bench Verified** score - the highest raw coding capability of any model. Claude Sonnet 5 (June 30, 2026) offers the best value.
+
+## Model Family (July 2026)
+
+| Model | Best For | Price (Input/Output) |
+|-------|----------|---------------------|
+| **Claude Fable 5** | Maximum coding capability | $10/$50 per 1M tokens |
+| **Claude Sonnet 5** | Best value coder | $3/$15 per 1M tokens |
+| **Claude Opus 4.8** | Deepest reasoning | $5/$25 per 1M tokens |
 
 ## Key Features
 
-- **Nuanced Understanding**: Claude excels at understanding context and subtlety
-- **Careful Reasoning**: Thoughtful step-by-step analysis of complex problems
-- **Instruction Following**: Precise adherence to detailed formatting and content requirements
-- **Long Context**: Can handle very long conversations and documents
+- **1M Token Context Window**: Process entire repositories
+- **Extended Thinking**: Automated structured reasoning
+- **Claude Code**: Native agentic coding tool
+- **Tool Use**: Function calling and API integration
+- **200K Output**: Generate long, coherent responses
 
 ## Best Practices
 
-### 1. Provide Clear Context
+### 1. Be Explicit and Clear
 
-Claude responds best when given clear, comprehensive context for your task.
+Claude responds best to direct, unambiguous instructions. Lead with action verbs.
 
 **Example:**
 ```
 Instead of: "Write a summary"
-Use: "You are a technology analyst. Write a 300-word executive summary of this technical document for non-technical stakeholders. Focus on business implications and key recommendations."
+Use: "Summarize this technical document in 300 words for non-technical stakeholders. Focus on business implications and key recommendations."
 ```
 
-### 2. Use XML Tags for Structure
+### 2. Provide Context and Motivation
 
-Claude handles XML tags well for structuring complex prompts.
+Explain why a task matters to improve quality.
 
 **Example:**
 ```
-<article>
-  [Your article text here]
-</article>
-
-<instructions>
-Summarize the above article in 3 bullet points, focusing on key findings.
-</instructions>
+We're migrating from a monolithic architecture to microservices. This is critical for scalability and team autonomy. Analyze this codebase and identify the best candidates for extraction into separate services.
 ```
 
-### 3. Leverage Claude's Honesty
+### 3. Use Examples (Few-Shot)
 
-Claude is designed to be honest about uncertainty. Use this to your advantage.
+Provide 2-5 examples for complex transformations:
 
 **Example:**
 ```
-If you're unsure about any aspect of my request, please indicate that clearly rather than guessing.
+Convert natural language to SQL:
+
+Input: "Show me all users who signed up in the last 30 days"
+Output: SELECT * FROM users WHERE created_at > NOW() - INTERVAL '30 days';
+
+Input: "Count orders per customer with more than 5 orders"
+Output: SELECT customer_id, COUNT(*) as order_count FROM orders GROUP BY customer_id HAVING COUNT(*) > 5;
+
+Input: "Find products that are out of stock"
+Output:
 ```
 
-### 4. Use Step-by-Step Instructions
+### 4. Give Permission to Express Uncertainty
 
-Break complex tasks into numbered steps for better results.
+Reduce hallucinations by allowing Claude to say "I don't know."
 
 **Example:**
 ```
-Please analyze this data in the following steps:
-1. Identify the key trends
-2. Note any anomalies
-3. Provide a summary with recommendations
+If you're unsure about any part of this analysis, please indicate that clearly rather than guessing. It's better to say "I'm not certain" than to provide potentially incorrect information.
 ```
 
-### 5. Specify Output Format
+### 5. Prefill the Response
 
-Claude excels at following detailed formatting instructions.
+Guide format by starting the response yourself:
 
 **Example:**
 ```
-Provide your response in the following format:
-- **Summary**: One paragraph overview
-- **Key Points**: 3-5 bullet points
-- **Recommendations**: Numbered list with brief explanations
+Analyze this code for security vulnerabilities.
+
+## Security Analysis
+
+**Critical Issues:**
 ```
 
-## Common Pitfalls
+### 6. Use Extended Thinking for Complex Tasks
 
-1. **Ambiguous Instructions**: Vague requests lead to generic responses
-2. **Conflicting Requirements**: Don't give contradictory instructions
-3. **Missing Context**: Without background, responses may miss the mark
-4. **Ignoring Safety**: Claude may decline requests that seem harmful
+Claude's extended thinking handles multi-step reasoning automatically. Just describe the task clearly and let it think.
 
 ## Advanced Techniques
 
-### Chain of Thought with Claude
+### Claude Code (Agentic Coding)
 
-Ask Claude to think through problems step by step for complex reasoning.
+Claude Sonnet 5 includes native Claude Code - an agentic coding tool that can:
+- Read and write files
+- Run terminal commands
+- Navigate codebases
+- Fix bugs autonomously
 
-### Role Playing
+### Prompt Chaining
 
-Claude can effectively adopt different roles and expertise levels.
+Break complex tasks into sequential steps:
+1. Analyze the problem
+2. Create a plan
+3. Execute step by step
+4. Review and refine
 
-### Iterative Refinement
+### Context Engineering
 
-Start with a broad request, then refine based on initial output.
+Manage broader context beyond just the prompt:
+- Conversation history
+- File contents
+- System instructions
+- Tool outputs
 
-## Tips for Specific Use Cases
+## Model Comparison (July 2026)
 
-### Analysis and Research
-- Provide source material explicitly
-- Ask for citations and evidence
-- Request structured analysis formats
+| Feature | Claude Fable 5 | GPT-5.5 | Gemini 3.5 |
+|---------|----------------|---------|------------|
+| SWE-bench | ~95% | ~82% | ~75% |
+| Context Window | 1M | 1M | 1M |
+| Reasoning | Excellent | Excellent | Strong |
+| Coding | Best | Strong | Strong |
+| Price (Input) | $10 | $5 | $1.50 |
 
-### Creative Writing
-- Specify tone, style, and audience
-- Provide examples of desired output
-- Use Claude's strength in nuanced language
+## When to Use Claude Fable 5
 
-### Code Generation
-- Specify language and framework
-- Include error handling requirements
-- Request detailed comments
+- Maximum coding capability needed
+- Complex code generation and refactoring
+- Long document analysis
+- Tasks requiring careful, nuanced reasoning
+- Agentic coding workflows with Claude Code
 
-## Model Comparison
+## When to Use Claude Sonnet 5
 
-| Feature | Claude 3.5 | GPT-4 |
-|---------|------------|-------|
-| Nuanced Understanding | Excellent | Excellent |
-| Reasoning | Strong | Strong |
-| Context Length | 200K tokens | 128K tokens |
-| Safety | Very Conservative | Balanced |
-| Speed | Fast | Moderate |
-
-## When to Use Claude 3.5
-
-- Tasks requiring careful, nuanced analysis
-- Long document processing
-- Applications needing strong safety guardrails
-- Tasks where honesty about uncertainty is important
-
-## When to Use Alternatives
-
-- Creative tasks requiring more flexibility (consider GPT-4)
-- Tasks needing real-time data (use models with web access)
-- Highly specialized domain tasks (use domain-specific models)
+- Best balance of cost and capability
+- High-volume coding tasks
+- Daily development assistance
+- Budget-conscious applications

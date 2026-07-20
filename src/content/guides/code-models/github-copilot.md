@@ -1,185 +1,208 @@
 ---
-title: "GitHub Copilot Guide"
-description: "Write better code with AI-powered assistance"
+title: "AI Coding Tools Guide 2026"
+description: "Master AI-assisted coding with Claude Code, Cursor, Copilot, and more"
 modelType: "code"
-modelSlug: "github-copilot"
-version: "2.0"
-lastUpdated: 1690000000000
+modelSlug: "ai-coding-2026"
+version: "2026"
+lastUpdated: 1753084800000
 icon: "Code2"
 color: "green"
 ---
 
-# GitHub Copilot Guide
+# AI Coding Tools Guide 2026
 
-GitHub Copilot is an AI pair programmer that helps you write code faster and with less work. This guide will help you craft effective prompts to get the best assistance.
+The AI coding landscape has evolved dramatically in 2026. This guide covers the top tools and how to use them effectively.
 
-## Key Features
+## Top Coding Models (July 2026)
 
-- **Code Completion**: Real-time code suggestions as you type
-- **Multi-Language Support**: Works with dozens of programming languages
-- **Context Awareness**: Understands your codebase context
-- **Chat Interface**: Ask questions about your code in natural language
+| Model | SWE-bench | Best For | Price |
+|-------|-----------|----------|-------|
+| **Claude Fable 5** | ~95% | Maximum capability | $10/$50 |
+| **Claude Sonnet 5** | ~88% | Best value | $3/$15 |
+| **GLM-5.2** | ~81% | Open-source leader | $1.40/$4.40 |
+| **GPT-5.5** | ~82% | General coding | $5/$30 |
+| **Kimi K2.7 Code** | ~78% | Budget agentic | $0.95/$4 |
 
-## How Copilot Works
+## AI Coding Tools
 
-Copilot analyzes:
-1. Your current code and comments
-2. File names and imports
-3. Function signatures and types
-4. Comments and documentation
-5. Programming patterns in your codebase
+### Claude Code (Anthropic)
 
-## Best Practices
+Native agentic coding tool integrated into Claude Sonnet 5.
 
-### 1. Write Descriptive Comments
-Comments help Copilot understand your intent.
+**Features:**
+- Read/write files autonomously
+- Run terminal commands
+- Navigate codebases
+- Fix bugs with full context
+- Multi-file refactoring
 
-**Example:**
+**Best Practices:**
+```
+Instead of: "Fix this bug"
+Use: "The login endpoint returns 500 when email contains special characters. 
+Find the validation code, fix the regex, and add tests for edge cases."
+```
+
+### Cursor
+
+Default AI coding assistant for Claude users.
+
+**Features:**
+- Inline completions (Tab)
+- Chat with codebase context
+- Multi-file editing
+- Terminal integration
+- Custom rules
+
+**Best Practices:**
+1. Write `.cursorrules` file with project conventions
+2. Use `@file` to reference specific files
+3. Use `@codebase` for project-wide context
+4. Be specific about output format
+
+### GitHub Copilot
+
+**Features:**
+- Real-time code suggestions
+- Chat interface
+- Multi-language support
+- Security scanning
+
+**Best Practices:**
 ```python
-# Calculate the average of a list of numbers, handling empty lists
+# Write descriptive comments
+# Calculate the average of a list, handling empty lists
 def calculate_average(numbers):
-    # Copilot will suggest implementation based on comment
+    # Copilot suggests implementation
 ```
 
-### 2. Use Clear Function Signatures
-Well-defined function signatures guide Copilot's suggestions.
+### Codex (OpenAI)
+
+Powered by GPT-5.6 Sol for coding tasks.
+
+**Features:**
+- Code generation
+- Bug fixing
+- Test generation
+- Documentation
+
+## Prompt Engineering for Code Generation
+
+### 1. Be Specific About Requirements
 
 **Example:**
-```typescript
-// Copilot understands TypeScript types
-function processUserData(user: User): ProcessedData {
-    // Suggestions will match the type signature
-}
+```
+Instead of: "Write a function"
+Use: "Write a TypeScript function that:
+- Takes an array of User objects
+- Filters by active status
+- Groups by department
+- Returns a Record<string, User[]>
+- Handles empty arrays gracefully"
 ```
 
-### 3. Provide Context with Imports
-Import statements help Copilot understand available libraries.
+### 2. Provide Context
 
 **Example:**
-```javascript
-import React from 'react';
-import { useState, useEffect } from 'react';
-// Copilot will suggest React-specific patterns
+```
+I'm building a React app with:
+- TypeScript
+- Zustand for state
+- Tailwind CSS for styling
+
+Create a TodoList component that:
+- Displays todos from the store
+- Allows adding, completing, and deleting
+- Shows completion statistics
+- Uses the existing Todo type from types/todo.ts
 ```
 
-### 4. Use Tab Completion Effectively
-- Press `Tab` to accept suggestions
-- Press `Esc` to dismiss
-- Use `Ctrl+Enter` to see multiple suggestions
-- Write partial code to guide suggestions
+### 3. Use Examples
 
-## Copilot Chat Best Practices
+**Example:**
+```
+Convert this natural language to SQL:
 
-### Ask Specific Questions
-**Instead of:** "How do I fix this?"
-**Use:** "Why is this React component re-rendering unnecessarily?"
+Input: "Show me all users who signed up in the last 30 days"
+Output: SELECT * FROM users WHERE created_at > NOW() - INTERVAL '30 days';
 
-### Provide Context
-Include relevant code when asking questions.
+Input: "Count orders per customer with more than 5 orders"  
+Output: SELECT customer_id, COUNT(*) as order_count FROM orders GROUP BY customer_id HAVING COUNT(*) > 5;
 
-### Request Explanations
-Ask Copilot to explain code you don't understand.
-
-## Common Use Cases
-
-### Code Generation
-Write a comment describing what you need:
-```python
-# Function to parse CSV file and return list of dictionaries
+Input: "Find products that are out of stock"
+Output:
 ```
 
-### Test Generation
-Write test function signatures:
-```javascript
-describe('UserAuth', () => {
-  it('should validate email format', () => {
-    // Copilot generates test cases
-  });
-});
+### 4. Request Tests
+
+**Example:**
+```
+Write this function AND comprehensive unit tests:
+
+function calculateDiscount(price: number, discountPercent: number): number
+
+Requirements:
+- Throws if price is negative
+- Throws if discount is outside 0-100
+- Returns 0 for 100% discount
+- Returns original price for 0% discount
+- Handles decimal prices correctly
 ```
 
-### Documentation
-Write JSDoc comments:
-```typescript
-/**
- * Processes user data and returns formatted result
- * @param user - Raw user data from API
- * @returns Processed and validated user data
- */
+### 5. Code Review Prompts
+
+**Example:**
+```
+Review this code for:
+1. Security vulnerabilities
+2. Performance issues
+3. Code quality problems
+4. Missing error handling
+
+Provide specific line-by-line feedback with severity levels.
 ```
 
-### Refactoring
-Select code and ask Copilot to improve it.
+## Best Practices by Language
 
-## Advanced Techniques
-
-### Template Patterns
-Use template patterns for consistent code:
-```python
-class {ClassName}:
-    def __init__(self, {params}):
-        {init_body}
-    
-    def {method_name}(self, {params}):
-        {method_body}
-```
-
-### Multi-Line Completions
-Write the first few lines and let Copilot complete the pattern.
-
-### Language-Specific Tips
-
-#### Python
-- Use type hints for better suggestions
-- Write docstrings for functions
-- Use dataclasses for structured data
-
-#### JavaScript/TypeScript
-- Use JSDoc comments
-- Define interfaces for complex objects
+### TypeScript/JavaScript
+- Use interfaces for function parameters
+- Specify return types explicitly
 - Use async/await patterns
+- Include error handling
 
-#### React
-- Write component props interfaces
-- Use hooks patterns in comments
-- Describe component behavior
+### Python
+- Use type hints
+- Write docstrings
+- Use dataclasses for structured data
+- Specify error handling
 
-## Limitations
+### React
+- Define component props interfaces
+- Use hooks patterns
+- Specify state management approach
+- Include accessibility considerations
 
-1. **Context Window**: Copilot has limited context
-2. **Not Always Correct**: Review suggestions carefully
-3. **Security**: Don't accept suggestions with sensitive data
-4. **Performance**: Large files may slow suggestions
+## Common Mistakes
 
-## Model Comparison
+1. **Too Vague**: "Make it better" - no actionable guidance
+2. **Missing Context**: Not providing existing code structure
+3. **No Tests**: Not requesting test coverage
+4. **Ignoring Reviews**: Not validating generated code
 
-| Feature | Copilot | Copilot Chat | CodeWhisperer |
-|---------|---------|--------------|---------------|
-| Inline Completions | Yes | No | Yes |
-| Chat Interface | No | Yes | Yes |
-| Security Scanning | Basic | Basic | Advanced |
-| Multi-Language | Yes | Yes | Yes |
-| Cost | Subscription | Included | Free tier available |
+## Model Comparison for Coding
 
-## When to Use Copilot
-
-- Writing boilerplate code
-- Learning new languages or frameworks
-- Generating tests and documentation
-- Refactoring existing code
-- Exploring different implementation approaches
-
-## When to Use Alternatives
-
-- Complex architectural decisions (use human judgment)
-- Security-critical code (manual review required)
-- Performance-critical code (manual optimization needed)
-- Domain-specific logic (expert knowledge required)
+| Feature | Claude Fable 5 | GPT-5.5 | Cursor |
+|---------|----------------|---------|--------|
+| Code Generation | Best | Strong | Strong |
+| Bug Fixing | Excellent | Good | Good |
+| Refactoring | Best | Good | Good |
+| Multi-file | Best | Good | Best |
+| Price | $10/$50 | $5/$30 | $20/mo |
 
 ## Tips for Maximum Productivity
 
-1. **Start with Structure**: Write function signatures first
-2. **Use Comments Liberally**: They guide Copilot's understanding
-3. **Review Suggestions**: Always verify generated code
-4. **Learn Patterns**: Notice common patterns Copilot suggests
-5. **Combine with Other Tools**: Use alongside linters and formatters
+1. **Start with structure** - Write function signatures first
+2. **Be specific** - Include types, requirements, constraints
+3. **Provide context** - Share relevant code and documentation
+4. **Request tests** - Always ask for test coverage
+5. **Review carefully** - AI suggestions need human verification
