@@ -1,71 +1,133 @@
 ---
-title: "Role and Task Definition"
-description: "Master the art of assigning roles and defining tasks clearly"
+title: "Role and Task Definition in 2026"
+description: "Master outcome-first task definition and modern role techniques"
 category: fundamentals
 difficulty: beginner
 estimatedTime: 15
 order: 3
-tags: ["role", "task", "definition"]
+tags: ["role", "task", "definition", "2026"]
 ---
 
-# Role and Task Definition
+# Role and Task Definition in 2026
 
-Assigning a role to the AI and clearly defining the task are powerful techniques for getting better results.
+In 2026, roles are **less important** than they used to be. Modern models follow instructions directly - but roles still help when you need specific expertise or perspective.
 
-## The Power of Roles
+## The Shift: Roles vs Outcome-First
 
-When you assign a role, you give the AI a perspective and expertise to draw from.
+| 2024 Approach | 2026 Approach |
+|---|---|
+| "You are an expert in X" | "Analyze this like a senior X would" |
+| Role-first, then task | Outcome-first, role as needed |
+| Elaborate persona setup | Lean, specific expertise |
 
-### Common Roles
-- **Expert**: "You are an expert in..."
-- **Teacher**: "You are a patient teacher explaining..."
-- **Writer**: "You are a professional writer..."
-- **Analyst**: "You are a data analyst..."
+## When Roles Still Matter
 
-## Task Definition
+1. **Domain expertise**: "You are a cybersecurity specialist reviewing this code"
+2. **Perspective setting**: "Approach this as a skeptical investor"
+3. **Behavioral constraints**: "You are a cautious advisor - flag risks before opportunities"
 
-Clearly define what you want the AI to accomplish.
+## The Outcome-First Framework
 
-### Good Task Definition
-"Write a 500-word blog post about sustainable living tips for beginners"
+**Instead of:** "You are a project manager. Create a project plan."
+**Use:** "Create a 4-week project plan for launching a mobile app. Done means: milestones, dependencies, resource allocation, risk mitigation."
 
-### Poor Task Definition
-"Write about sustainability"
-
-## Example
+### Outcome-First Task Definition
 
 ```python
-# Role and task combined
+# Old approach (role-heavy)
 prompt = """
-Role: You are a senior software engineer with 10 years of experience in Python.
+You are a senior technical writer with 15 years of experience.
+You understand documentation best practices.
+You know how to make complex topics accessible.
 
-Task: Review the following code and provide:
-1. Bug identification
-2. Performance improvements
-3. Code style suggestions
-
-Code to review:
-def calculate_average(numbers):
-    total = 0
-    for num in numbers:
-        total += num
-    return total / len(numbers)
+Task: Write documentation for this API endpoint.
 """
+
+# 2026 approach (outcome-first)
+prompt = """Write API documentation for POST /api/users.
+
+Done means:
+- Endpoint description
+- Request body with examples
+- Response format
+- Error codes
+- Authentication requirements
+
+Keep it concise. Developers should be able to integrate in <10 minutes."""
+```
+
+## Combining Role + Outcome
+
+For complex tasks, use role **and** outcome:
+
+```
+<Role>: Senior security engineer with OWASP expertise
+
+<Task>: Review this authentication code
+
+<Done means>:
+- Critical vulnerabilities identified
+- Fix recommendations with code examples
+- Risk severity ratings
+```
+
+## Real-World Example: Code Review
+
+```python
+# Weak task definition
+prompt = "Review this code"
+
+# Outcome-first task definition
+prompt = """Review this Python function for:
+1. Security vulnerabilities (OWASP Top 10)
+2. Performance bottlenecks
+3. Error handling gaps
+
+Return:
+- Issues ranked by severity (critical/high/medium/low)
+- Specific line numbers
+- Fix suggestions with code snippets"""
+```
+
+## The "Done Means" Pattern
+
+Always define what success looks like:
+
+```
+Task: Analyze customer feedback from Q2
+
+Done means:
+- Top 3 themes identified with evidence
+- Sentiment breakdown (positive/negative/neutral %)
+- Actionable recommendations
+- Executive summary (2-3 sentences)
 ```
 
 ## Quiz
 
 <Quiz
-  question="What does assigning a role to the AI accomplish?"
+  question="In 2026, what is more important than elaborate role setup?"
   options={[
-    "Makes the AI faster",
-    "Gives the AI a perspective and expertise",
-    "Reduces token usage",
-    "Changes the AI's model"
+    "Using XML tags",
+    "Defining the outcome clearly",
+    "Providing many examples",
+    "Setting temperature parameters"
   ]}
   correct={1}
 />
 
-## Next Steps
+<Quiz
+  question="What is the 'Done Means' pattern?"
+  options={[
+    "A way to define success criteria",
+    "A type of role definition",
+    "A format specification",
+    "A constraint setting"
+  ]}
+  correct={0}
+/>
 
-Learn how to use few-shot learning to teach AI with examples.
+## Practice
+
+Rewrite this role-heavy prompt using the outcome-first approach:
+"You are an experienced data scientist with expertise in machine learning. You understand statistical analysis and can explain complex concepts simply. Please analyze this dataset and tell me what you find."

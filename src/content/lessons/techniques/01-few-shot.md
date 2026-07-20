@@ -1,66 +1,136 @@
 ---
-title: "Few-Shot Learning"
-description: "Teach AI with examples for improved task performance"
+title: "Few-Shot Learning in 2026"
+description: "Master canonical examples - the most powerful technique in modern prompting"
 category: techniques
 difficulty: intermediate
 estimatedTime: 12
 order: 1
-tags: ["examples", "learning", "few-shot"]
+tags: ["examples", "learning", "few-shot", "2026"]
 ---
 
-# Few-Shot Learning
+# Few-Shot Learning in 2026
 
-Few-shot learning is a technique where you provide examples to teach the AI the pattern you want it to follow.
+**Anthropic's key insight:** "Few-shot examples are worth a thousand words." Diverse canonical examples outperform pages of instructions.
 
-## How Few-Shot Works
+## The 2026 Shift
 
-By showing the AI a few examples, you establish a pattern that it can then apply to new inputs.
+| Old Approach | New Approach |
+|---|---|
+| Many edge-case examples | Few diverse canonical examples |
+| Examples show output format | Examples show reasoning style |
+| 10+ examples | 2-5 high-quality examples |
+| Examples as instruction | Examples as "pictures" |
 
-### Types of Few-Shot
-- **Zero-shot**: No examples provided
-- **One-shot**: One example provided
-- **Few-shot**: Multiple examples provided (typically 2-5)
+## Why Examples Beat Instructions
 
-## Example
+Modern models learn patterns from examples more reliably than from rules. A good example demonstrates:
+1. **Thinking style** (how to approach the problem)
+2. **Output format** (what the result looks like)
+3. **Edge case handling** (what to do when uncertain)
+
+## The Canonical Example Pattern
 
 ```python
-# Few-shot example for sentiment analysis
-prompt = """
-Classify the sentiment of these reviews:
+# 2026 approach: Diverse canonical examples
 
-Review: "This product is amazing!"
-Sentiment: Positive
+prompt = """Transform user stories into technical requirements:
 
-Review: "Terrible quality, broke after one day."
-Sentiment: Negative
+Example 1 - Simple feature:
+Input: "As a user, I want to reset my password"
+Output: {
+  "endpoint": "POST /api/auth/reset-password",
+  "validation": ["email format"],
+  "security": ["token expiration"]
+}
 
-Review: "It's okay, nothing special."
-Sentiment: Neutral
+Example 2 - Complex feature:
+Input: "As an admin, I want to export user data as CSV for compliance"
+Output: {
+  "endpoint": "GET /api/admin/users/export",
+  "validation": ["admin role", "date range"],
+  "security": ["admin auth", "audit logging"],
+  "performance": ["pagination", "streaming"]
+}
 
-Review: "Best purchase I've ever made!"
-Sentiment: ?"""
+Now transform:
+Input: "As a user, I want to save items to a wishlist"
+Output:"""
 ```
 
-## Best Practices
+## Example Selection Rules
 
-1. **Use diverse examples**: Show different scenarios
-2. **Keep examples consistent**: Use the same format
-3. **Include edge cases**: Cover different possibilities
-4. **Order matters**: Start with clear examples
+### 1. Show Diversity
+Include examples that cover different scenarios:
+- Simple case
+- Complex case
+- Edge case
+- Error case
+
+### 2. Show Reasoning, Not Just Results
+```python
+# Bad: Only shows output
+Input: "Summarize this article"
+Output: "Key points: ..."
+
+# Good: Shows thinking process
+Input: "Summarize this article"
+Thinking: "I need to identify the main argument, key evidence, and conclusion..."
+Output: "Key points: ..."
+```
+
+### 3. Keep Examples Diverse but Consistent
+- Same output format across examples
+- Same level of detail
+- Consistent style
+
+## Few-Shot for Different Tasks
+
+### Classification
+```
+Input: "Great product!" → Positive
+Input: "Terrible service" → Negative
+Input: "It's okay" → Neutral
+Input: "Love it!" → ?
+```
+
+### Transformation
+```
+Input: "Make it bigger" → "Increase dimensions by 20%"
+Input: "Add more detail" → "Expand each section with specific examples"
+Input: "Make it shorter" → "Reduce to 50% length, keep key points"
+```
+
+### Generation
+```
+Input: "Blog post about React" → 500 words, technical, with code examples
+Input: "Tweet about React" → 280 chars, casual, with emoji
+Input: "Documentation for React" → Structured, API reference style
+```
 
 ## Quiz
 
 <Quiz
-  question="How many examples are typically used in few-shot learning?"
+  question="According to Anthropic, why are examples more powerful than instructions?"
   options={[
-    "Exactly 1",
-    "2-5 examples",
-    "At least 10",
-    "It doesn't matter"
+    "Examples use fewer tokens",
+    "Examples show 'pictures worth a thousand words'",
+    "Examples are processed faster",
+    "Examples bypass safety filters"
+  ]}
+  correct={1}
+/>
+
+<Quiz
+  question="What should canonical examples demonstrate?"
+  options={[
+    "Only the output format",
+    "Thinking style, output format, and edge case handling",
+    "Just the happy path",
+    "Maximum possible complexity"
   ]}
   correct={1}
 />
 
 ## Practice
 
-Create a few-shot prompt for classifying emails as urgent or non-urgent.
+Create 3 diverse canonical examples for converting natural language to SQL queries.
