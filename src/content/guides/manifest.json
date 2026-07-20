@@ -1,0 +1,47 @@
+{
+  "llms": {
+    "title": "Large Language Models",
+    "description": "Master prompt engineering for text-based AI models",
+    "icon": "Bot",
+    "color": "primary",
+    "guides": [
+      "gpt-4",
+      "claude-3.5",
+      "gemini-pro",
+      "llama-3"
+    ]
+  },
+  "image-generators": {
+    "title": "Image Generators",
+    "description": "Create stunning images with AI-powered generation",
+    "icon": "Palette",
+    "color": "secondary",
+    "guides": [
+      "midjourney",
+      "dall-e-3",
+      "stable-diffusion",
+      "flux"
+    ]
+  },
+  "code-models": {
+    "title": "Code Models",
+    "description": "Write better code with AI assistance",
+    "icon": "Code2",
+    "color": "success",
+    "guides": [
+      "github-copilot",
+      "cursor",
+      "codestral"
+    ]
+  },
+  "specialized": {
+    "title": "Specialized Models",
+    "description": "Domain-specific AI models for niche applications",
+    "icon": "Wrench",
+    "color": "warning",
+    "guides": [
+      "embedding-models",
+      "audio-models"
+    ]
+  }
+}

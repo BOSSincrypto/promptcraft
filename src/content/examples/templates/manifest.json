@@ -1,0 +1,39 @@
+{
+  "categories": {
+    "role-play": {
+      "title": "Role-Play",
+      "description": "Take on different roles and personas for creative and professional scenarios",
+      "icon": "User",
+      "color": "purple",
+      "templates": ["role-play-expert", "role-play-historical"]
+    },
+    "code": {
+      "title": "Code",
+      "description": "Generate, review, and debug code with best practices",
+      "icon": "Code",
+      "color": "blue",
+      "templates": ["code-generator", "code-review"]
+    },
+    "creative": {
+      "title": "Creative",
+      "description": "Generate stories, poems, and other creative content",
+      "icon": "Sparkles",
+      "color": "pink",
+      "templates": ["creative-story", "creative-poem"]
+    },
+    "analysis": {
+      "title": "Analysis",
+      "description": "Analyze data, research, and complex information",
+      "icon": "BarChart3",
+      "color": "green",
+      "templates": ["analysis-data", "analysis-research"]
+    },
+    "general": {
+      "title": "General",
+      "description": "Explain concepts, plan projects, and solve problems",
+      "icon": "Lightbulb",
+      "color": "orange",
+      "templates": ["general-explainer", "general-planner"]
+    }
+  }
+}

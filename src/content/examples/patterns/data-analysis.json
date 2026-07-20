@@ -1,0 +1,13 @@
+{
+  "id": "data-analysis-framework",
+  "title": "Structured Data Analysis Framework",
+  "description": "A systematic approach to analyzing datasets with clear methodology",
+  "prompt": "Analyze the following sales data and provide insights:\n\nQ1: $125,000\nQ2: $142,000 (new product launch)\nQ3: $98,000 (market downturn)\nQ4: $167,000 (holiday season)\n\nProvide:\n1. Year-over-year growth analysis\n2. Seasonal pattern identification\n3. Impact assessment of the new product\n4. Risk factors and mitigation strategies\n5. Recommendations for next year\n\nUse a structured analytical framework.",
+  "expectedOutput": "**Sales Data Analysis Report**\n\n**1. Year-over-Year Growth Analysis**\n- Total Annual Revenue: $532,000\n- Average Quarterly Revenue: $133,000\n- Growth Trend: Volatile with recovery pattern\n- Q4 Performance: +27% above average\n\n**2. Seasonal Pattern Identification**\n- **Peak Season**: Q4 (Holiday) - 25% above average\n- **Low Season**: Q3 (Market Downturn) - 26% below average\n- **Pattern**: Clear seasonal variation with Q4 dominance\n- **Coefficient of Variation**: 19.8% (significant seasonality)\n\n**3. New Product Impact Assessment**\n- Q2 Launch Contribution: $142,000 (+13.6% vs. baseline)\n- **Immediate Impact**: Strong initial reception\n- **Sustainability**: Unknown without Q3 comparison\n- **ROI Indicators**: Positive short-term revenue boost\n\n**4. Risk Factors & Mitigation**\n| Risk Factor | Impact | Probability | Mitigation |\n|-------------|--------|-------------|------------|\n| Market Downturn | High | Medium | Diversify revenue streams |\n| Seasonal Dependency | Medium | High | Develop counter-seasonal products |\n| Product Lifecycle | Medium | Medium | Continuous innovation pipeline |\n\n**5. Recommendations for Next Year**\n1. **Diversify Revenue**: Reduce Q4 dependency by 15%\n2. **Counter-Seasonal Strategy**: Launch products in Q1/Q3\n3. **Market Resilience**: Build 3-month cash reserves\n4. **Product Pipeline**: Introduce 2 new products in Q1\n5. **Performance Targets**: \n   - Q1: $155,000 (+24%)\n   - Q2: $158,000 (+11%)\n   - Q3: $125,000 (+28%)\n   - Q4: $180,000 (+8%)\n   - **Annual Target**: $618,000 (+16%)\n\n**Conclusion**: Strong recovery potential with strategic diversification.",
+  "author": "DataAnalyst_Pro",
+  "category": "analysis",
+  "tags": ["data-analysis", "business", "sales", "strategy", "framework"],
+  "likes": 31,
+  "createdAt": 1721126400000,
+  "difficulty": "intermediate"
+}

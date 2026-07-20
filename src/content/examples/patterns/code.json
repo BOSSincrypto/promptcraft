@@ -1,0 +1,19 @@
+{
+  "category": "code",
+  "examples": [
+    {
+      "id": "code-review-example",
+      "title": "Comprehensive Code Review Prompt",
+      "description": "Get thorough code reviews with security, performance, and best practices analysis",
+      "prompt": "Please review the following Python code for:\n1. Security vulnerabilities\n2. Performance issues\n3. Code style and PEP 8 compliance\n4. Error handling\n5. Potential bugs\n\nProvide specific suggestions for improvement with code examples.\n\n```python\nimport sqlite3\nimport os\n\ndef get_user_data(user_id):\n    conn = sqlite3.connect('users.db')\n    cursor = conn.cursor()\n    query = f\"SELECT * FROM users WHERE id = {user_id}\"\n    cursor.execute(query)\n    result = cursor.fetchone()\n    conn.close()\n    return result\n\nuser_data = get_user_data(input(\"Enter user ID: \"))\nprint(f\"User: {user_data}\")\n```",
+      "expectedOutput": "Here's my comprehensive code review:\n\n**Security Vulnerabilities:**\n1. **SQL Injection (Critical)**: The f-string query is vulnerable. Use parameterized queries:\n   ```python\n   cursor.execute(\"SELECT * FROM users WHERE id = ?\", (user_id,))\n   ```\n\n2. **Input Validation**: No validation on user input. Add type checking:\n   ```python\n   user_id = int(input(\"Enter user ID: \"))\n   ```\n\n**Performance Issues:**\n1. **Connection per call**: Each function call creates a new connection. Use connection pooling or context managers.\n\n**Error Handling:**\n1. No try-except blocks for database operations\n2. No handling for invalid user IDs\n3. No connection error handling\n\n**Code Style:**\n1. Use constants for database path\n2. Add docstrings\n3. Use type hints\n\n**Improved Version:**\n```python\nimport sqlite3\nfrom typing import Optional, Tuple\n\nDATABASE_PATH = \"users.db\"\n\ndef get_user_data(user_id: int) -> Optional[Tuple]:\n    \"\"\"Retrieve user data by ID with proper error handling.\"\"\"\n    try:\n        with sqlite3.connect(DATABASE_PATH) as conn:\n            cursor = conn.cursor()\n            cursor.execute(\"SELECT * FROM users WHERE id = ?\", (user_id,))\n            return cursor.fetchone()\n    except sqlite3.Error as e:\n        print(f\"Database error: {e}\")\n        return None\n\ntry:\n    user_id = int(input(\"Enter user ID: \"))\n    user_data = get_user_data(user_id)\n    if user_data:\n        print(f\"User: {user_data}\")\n    else:\n        print(\"User not found.\")\nexcept ValueError:\n    print(\"Invalid user ID.\")\n```",
+      "author": "SecurityFirst",
+      "category": "code",
+      "tags": ["python", "security", "code-review", "best-practices"],
+      "likes": 56,
+      "createdAt": 1721299200000,
+      "isFeatured": true,
+      "difficulty": "intermediate"
+    }
+  ]
+}

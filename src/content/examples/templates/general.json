@@ -1,0 +1,87 @@
+{
+  "category": "general",
+  "templates": [
+    {
+      "id": "general-explainer",
+      "title": "Concept Explainer",
+      "description": "Explain complex concepts in simple terms with examples.",
+      "category": "general",
+      "model": "gpt-4",
+      "content": "Explain {{concept}} to someone who is {{audience}}.\n\nUse the following approach:\n1. Simple definition (1-2 sentences)\n2. Real-world analogy\n3. Key components or principles\n4. Common examples\n5. Why it matters\n6. Common misconceptions\n\nTone: {{tone}}\nDepth: {{depth}}",
+      "variables": [
+        {
+          "name": "concept",
+          "description": "Concept to explain",
+          "defaultValue": "machine learning",
+          "required": true
+        },
+        {
+          "name": "audience",
+          "description": "Target audience level",
+          "defaultValue": "a high school student with no technical background",
+          "required": true
+        },
+        {
+          "name": "tone",
+          "description": "Tone of the explanation",
+          "defaultValue": "friendly and approachable",
+          "required": false
+        },
+        {
+          "name": "depth",
+          "description": "Level of detail needed",
+          "defaultValue": "intermediate - enough to understand the basics and some applications",
+          "required": false
+        }
+      ],
+      "examples": [
+        "Explain machine learning to someone who is a high school student with no technical background.\n\nUse the following approach:\n1. Simple definition (1-2 sentences)\n2. Real-world analogy\n3. Key components or principles\n4. Common examples\n5. Why it matters\n6. Common misconceptions\n\nTone: friendly and approachable\nDepth: intermediate - enough to understand the basics and some applications"
+      ],
+      "tags": ["general", "education", "explanation", "learning"]
+    },
+    {
+      "id": "general-planner",
+      "title": "Project Planner",
+      "description": "Create detailed project plans with timelines and milestones.",
+      "category": "general",
+      "model": "gpt-4",
+      "content": "Create a project plan for {{project}}.\n\nDetails:\n- Team size: {{team_size}}\n- Timeline: {{timeline}}\n- Budget: {{budget}}\n- Resources: {{resources}}\n\nPlease include:\n1. Project overview and objectives\n2. Work breakdown structure\n3. Timeline with milestones\n4. Resource allocation\n5. Risk assessment\n6. Success metrics\n7. Communication plan",
+      "variables": [
+        {
+          "name": "project",
+          "description": "Project description",
+          "defaultValue": "launching a new mobile app for fitness tracking",
+          "required": true
+        },
+        {
+          "name": "team_size",
+          "description": "Size of the team",
+          "defaultValue": "5 developers, 1 designer, 1 product manager",
+          "required": true
+        },
+        {
+          "name": "timeline",
+          "description": "Available time",
+          "defaultValue": "3 months",
+          "required": true
+        },
+        {
+          "name": "budget",
+          "description": "Budget constraints",
+          "defaultValue": "$50,000",
+          "required": true
+        },
+        {
+          "name": "resources",
+          "description": "Available resources",
+          "defaultValue": "existing design system, cloud infrastructure, testing tools",
+          "required": true
+        }
+      ],
+      "examples": [
+        "Create a project plan for launching a new mobile app for fitness tracking.\n\nDetails:\n- Team size: 5 developers, 1 designer, 1 product manager\n- Timeline: 3 months\n- Budget: $50,000\n- Resources: existing design system, cloud infrastructure, testing tools\n\nPlease include:\n1. Project overview and objectives\n2. Work breakdown structure\n3. Timeline with milestones\n4. Resource allocation\n5. Risk assessment\n6. Success metrics\n7. Communication plan"
+      ],
+      "tags": ["general", "planning", "project-management", "business"]
+    }
+  ]
+}

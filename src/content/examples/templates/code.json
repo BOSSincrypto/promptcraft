@@ -1,0 +1,81 @@
+{
+  "category": "code",
+  "templates": [
+    {
+      "id": "code-generator",
+      "title": "Code Generator",
+      "description": "Generate clean, well-documented code in a specific language for a given task.",
+      "category": "code",
+      "model": "gpt-4",
+      "content": "Write a {{language}} function called {{function_name}} that {{task_description}}. Requirements:\n1. {{requirement_1}}\n2. {{requirement_2}}\n3. {{requirement_3}}\n\nPlease include:\n- Clear comments explaining the logic\n- Error handling where appropriate\n- Example usage\n- Time and space complexity analysis",
+      "variables": [
+        {
+          "name": "language",
+          "description": "Programming language to use",
+          "defaultValue": "Python",
+          "required": true
+        },
+        {
+          "name": "function_name",
+          "description": "Name of the function",
+          "defaultValue": "process_data",
+          "required": true
+        },
+        {
+          "name": "task_description",
+          "description": "What the function should do",
+          "defaultValue": "processes a list of user data and returns aggregated statistics",
+          "required": true
+        },
+        {
+          "name": "requirement_1",
+          "description": "First requirement",
+          "defaultValue": "Handle empty input gracefully",
+          "required": true
+        },
+        {
+          "name": "requirement_2",
+          "description": "Second requirement",
+          "defaultValue": "Support both small and large datasets efficiently",
+          "required": true
+        },
+        {
+          "name": "requirement_3",
+          "description": "Third requirement",
+          "defaultValue": "Include type hints and docstrings",
+          "required": true
+        }
+      ],
+      "examples": [
+        "Write a Python function called process_data that processes a list of user data and returns aggregated statistics. Requirements:\n1. Handle empty input gracefully\n2. Support both small and large datasets efficiently\n3. Include type hints and docstrings\n\nPlease include:\n- Clear comments explaining the logic\n- Error handling where appropriate\n- Example usage\n- Time and space complexity analysis"
+      ],
+      "tags": ["code", "generation", "programming", "documentation"]
+    },
+    {
+      "id": "code-review",
+      "title": "Code Review Assistant",
+      "description": "Review code for bugs, performance issues, and best practices.",
+      "category": "code",
+      "model": "gpt-4",
+      "content": "Review the following {{language}} code for:\n1. Bugs and logical errors\n2. Performance issues\n3. Security vulnerabilities\n4. Code style and best practices\n5. Potential improvements\n\nCode to review:\n```\n{{code}}\n```\n\nPlease provide:\n- Detailed analysis of each issue found\n- Severity level (critical/high/medium/low)\n- Specific suggestions for improvement\n- Refactored code example if applicable",
+      "variables": [
+        {
+          "name": "language",
+          "description": "Programming language of the code",
+          "defaultValue": "JavaScript",
+          "required": true
+        },
+        {
+          "name": "code",
+          "description": "Code to review",
+          "defaultValue": "function calculateTotal(items) {\n  let total = 0;\n  for (let i = 0; i < items.length; i++) {\n    total += items[i].price;\n  }\n  return total;\n}",
+          "required": true
+        }
+      ],
+      "examples": [
+        "Review the following JavaScript code for:\n1. Bugs and logical errors\n2. Performance issues\n3. Security vulnerabilities\n4. Code style and best practices\n5. Potential improvements\n\nCode to review:\n```\nfunction calculateTotal(items) {\n  let total = 0;\n  for (let i = 0; i < items.length; i++) {\n    total += items[i].price;\n  }\n  return total;\n}\n```\n\nPlease provide:\n- Detailed analysis of each issue found\n- Severity level (critical/high/medium/low)\n- Specific suggestions for improvement\n- Refactored code example if applicable"
+      ],
+      "tags": ["code", "review", "debugging", "optimization"]
+    }
+  ]
+}

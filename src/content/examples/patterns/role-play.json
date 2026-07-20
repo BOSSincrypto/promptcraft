@@ -1,0 +1,20 @@
+{
+  "category": "role-play",
+  "examples": [
+    {
+      "id": "role-play-expert",
+      "title": "Expert Role-Play for Technical Advice",
+      "description": "Use expert personas to get specialized technical advice and insights",
+      "prompt": "You are a senior software architect with 20 years of experience in distributed systems. I'm designing a real-time notification system for a social media platform with 10 million users. What architecture would you recommend, and what are the key trade-offs to consider?",
+      "expectedOutput": "As a senior architect, here's my recommendation:\n\n**Architecture Overview:**\n1. **Message Queue Layer**: Use Kafka or RabbitMQ for handling notification streams\n2. **WebSocket Gateway**: For real-time push notifications to connected clients\n3. **Fallback Services**: Email, SMS, and push notification services for offline users\n4. **Notification Service**: Microservice to process and route notifications\n\n**Key Trade-offs:**\n- **Scalability vs. Complexity**: Distributed systems add operational complexity but handle load better\n- **Real-time vs. Battery**: WebSockets drain mobile battery; consider polling intervals\n- **Cost vs. Reliability**: Multiple delivery channels increase reliability but also costs\n\n**Recommendation:** Start with a monolithic notification service, then extract to microservices as you scale past 1 million concurrent users.",
+      "author": "TechArchitect",
+      "category": "role-play",
+      "tags": ["architecture", "system-design", "expert", "distributed-systems"],
+      "likes": 38,
+      "createdAt": 1721385600000,
+      "isFeatured": true,
+      "difficulty": "advanced",
+      "model": "claude-3.5-sonnet"
+    }
+  ]
+}

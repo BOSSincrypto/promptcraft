@@ -1,0 +1,117 @@
+{
+  "category": "creative",
+  "templates": [
+    {
+      "id": "creative-story",
+      "title": "Story Generator",
+      "description": "Generate creative stories with specific elements and themes.",
+      "category": "creative",
+      "model": "gpt-4",
+      "content": "Write a {{genre}} story with the following elements:\n- Setting: {{setting}}\n- Main character: {{character}}\n- Conflict: {{conflict}}\n- Theme: {{theme}}\n- Tone: {{tone}}\n\nThe story should be {{length}} and include:\n- Vivid descriptions\n- Engaging dialogue\n- A satisfying conclusion\n- At least one plot twist",
+      "variables": [
+        {
+          "name": "genre",
+          "description": "Story genre",
+          "defaultValue": "science fiction",
+          "required": true
+        },
+        {
+          "name": "setting",
+          "description": "Where and when the story takes place",
+          "defaultValue": "a dystopian future city in 2150",
+          "required": true
+        },
+        {
+          "name": "character",
+          "description": "Main character description",
+          "defaultValue": "a renegade hacker with a mysterious past",
+          "required": true
+        },
+        {
+          "name": "conflict",
+          "description": "Main conflict or challenge",
+          "defaultValue": "a corrupt AI system controlling the city",
+          "required": true
+        },
+        {
+          "name": "theme",
+          "description": "Central theme of the story",
+          "defaultValue": "the nature of consciousness and freedom",
+          "required": true
+        },
+        {
+          "name": "tone",
+          "description": "Emotional tone of the story",
+          "defaultValue": "noir with moments of hope",
+          "required": true
+        },
+        {
+          "name": "length",
+          "description": "Desired story length",
+          "defaultValue": "around 1500 words",
+          "required": false
+        }
+      ],
+      "examples": [
+        "Write a science fiction story with the following elements:\n- Setting: a dystopian future city in 2150\n- Main character: a renegade hacker with a mysterious past\n- Conflict: a corrupt AI system controlling the city\n- Theme: the nature of consciousness and freedom\n- Tone: noir with moments of hope\n\nThe story should be around 1500 words and include:\n- Vivid descriptions\n- Engaging dialogue\n- A satisfying conclusion\n- At least one plot twist"
+      ],
+      "tags": ["creative", "story", "fiction", "writing"]
+    },
+    {
+      "id": "creative-poem",
+      "title": "Poetry Generator",
+      "description": "Generate poems in various styles and forms.",
+      "category": "creative",
+      "model": "gpt-4",
+      "content": "Write a {{poem_type}} poem about {{topic}} in the style of {{style}}. The poem should:\n- Use {{imagery}} imagery\n- Evoke {{emotion}} emotions\n- Include {{element}} as a central motif\n- Be approximately {{length}} lines long",
+      "variables": [
+        {
+          "name": "poem_type",
+          "description": "Type of poem (sonnet, haiku, free verse, etc.)",
+          "defaultValue": "sonnet",
+          "required": true
+        },
+        {
+          "name": "topic",
+          "description": "Subject of the poem",
+          "defaultValue": "the passage of time",
+          "required": true
+        },
+        {
+          "name": "style",
+          "description": "Poetic style or movement",
+          "defaultValue": "Romantic",
+          "required": true
+        },
+        {
+          "name": "imagery",
+          "description": "Type of imagery to use",
+          "defaultValue": "natural and seasonal",
+          "required": true
+        },
+        {
+          "name": "emotion",
+          "description": "Primary emotions to evoke",
+          "defaultValue": "nostalgia and wonder",
+          "required": true
+        },
+        {
+          "name": "element",
+          "description": "Central motif or symbol",
+          "defaultValue": "a flowing river",
+          "required": true
+        },
+        {
+          "name": "length",
+          "description": "Desired length in lines",
+          "defaultValue": "14",
+          "required": false
+        }
+      ],
+      "examples": [
+        "Write a sonnet poem about the passage of time in the style of Romantic. The poem should:\n- Use natural and seasonal imagery\n- Evoke nostalgia and wonder emotions\n- Include a flowing river as a central motif\n- Be approximately 14 lines long"
+      ],
+      "tags": ["creative", "poetry", "writing", "artistic"]
+    }
+  ]
+}

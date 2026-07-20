@@ -1,0 +1,48 @@
+{
+  "categories": {
+    "technique": {
+      "title": "Techniques",
+      "description": "Advanced prompting techniques and strategies",
+      "icon": "Lightbulb",
+      "color": "yellow",
+      "examples": ["chain-of-thought-math"]
+    },
+    "role-play": {
+      "title": "Role-Play",
+      "description": "Expert personas and role-playing scenarios",
+      "icon": "User",
+      "color": "purple",
+      "examples": ["role-play-expert"]
+    },
+    "code": {
+      "title": "Code",
+      "description": "Code generation, review, and debugging",
+      "icon": "Code",
+      "color": "blue",
+      "examples": ["code-review-example"]
+    },
+    "creative": {
+      "title": "Creative",
+      "description": "Storytelling, writing, and creative content",
+      "icon": "Sparkles",
+      "color": "pink",
+      "examples": ["creative-story-telling"]
+    },
+    "analysis": {
+      "title": "Analysis",
+      "description": "Data analysis, research, and insights",
+      "icon": "BarChart3",
+      "color": "green",
+      "examples": ["data-analysis-framework"]
+    },
+    "general": {
+      "title": "General",
+      "description": "General-purpose prompts and templates",
+      "icon": "Lightbulb",
+      "color": "orange",
+      "examples": []
+    }
+  },
+  "featured": ["chain-of-thought-math", "role-play-expert", "code-review-example", "creative-story-telling"],
+  "totalExamples": 5
+}

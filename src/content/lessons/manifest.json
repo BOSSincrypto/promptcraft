@@ -1,0 +1,51 @@
+{
+  "categories": {
+    "fundamentals": {
+      "title": "Fundamentals",
+      "description": "Learn the basics of prompt engineering",
+      "order": 1,
+      "icon": "BookOpen",
+      "color": "blue",
+      "lessons": [
+        "01-what-is-prompting",
+        "02-basic-structure",
+        "03-role-and-task"
+      ]
+    },
+    "techniques": {
+      "title": "Techniques",
+      "description": "Master advanced prompting strategies",
+      "order": 2,
+      "icon": "Lightbulb",
+      "color": "purple",
+      "lessons": [
+        "01-few-shot",
+        "02-chain-of-thought",
+        "03-tree-of-thought"
+      ]
+    },
+    "advanced": {
+      "title": "Advanced",
+      "description": "Expert-level prompt engineering",
+      "order": 3,
+      "icon": "Rocket",
+      "color": "green",
+      "lessons": [
+        "01-prompt-chaining",
+        "02-optimization"
+      ]
+    },
+    "model-specific": {
+      "title": "Model-Specific",
+      "description": "Optimize prompts for specific models",
+      "order": 4,
+      "icon": "Cpu",
+      "color": "orange",
+      "lessons": [
+        "gpt-4",
+        "claude",
+        "gemini"
+      ]
+    }
+  }
+}

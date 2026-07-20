@@ -1,0 +1,81 @@
+{
+  "category": "analysis",
+  "templates": [
+    {
+      "id": "analysis-data",
+      "title": "Data Analysis Assistant",
+      "description": "Analyze data and provide insights with visualizations suggestions.",
+      "category": "analysis",
+      "model": "gpt-4",
+      "content": "Analyze the following data about {{topic}}:\n{{data}}\n\nPlease provide:\n1. Key findings and patterns\n2. Statistical analysis\n3. Trends and correlations\n4. Potential insights\n5. Recommended visualizations\n6. Actionable recommendations\n\nContext: {{context}}\nTarget audience: {{audience}}",
+      "variables": [
+        {
+          "name": "topic",
+          "description": "What the data represents",
+          "defaultValue": "customer behavior patterns",
+          "required": true
+        },
+        {
+          "name": "data",
+          "description": "The data to analyze",
+          "defaultValue": "Monthly active users: Jan=1000, Feb=1200, Mar=1100, Apr=1500, May=1800, Jun=2000\nRetention rate: 45%\nAverage session time: 12 minutes\nFeature usage: Dashboard=80%, Reports=60%, Settings=20%",
+          "required": true
+        },
+        {
+          "name": "context",
+          "description": "Background context for the analysis",
+          "defaultValue": "This is a SaaS product launched 6 months ago",
+          "required": true
+        },
+        {
+          "name": "audience",
+          "description": "Who will see this analysis",
+          "defaultValue": "product managers and executives",
+          "required": true
+        }
+      ],
+      "examples": [
+        "Analyze the following data about customer behavior patterns:\nMonthly active users: Jan=1000, Feb=1200, Mar=1100, Apr=1500, May=1800, Jun=2000\nRetention rate: 45%\nAverage session time: 12 minutes\nFeature usage: Dashboard=80%, Reports=60%, Settings=20%\n\nPlease provide:\n1. Key findings and patterns\n2. Statistical analysis\n3. Trends and correlations\n4. Potential insights\n5. Recommended visualizations\n6. Actionable recommendations\n\nContext: This is a SaaS product launched 6 months ago\nTarget audience: product managers and executives"
+      ],
+      "tags": ["analysis", "data", "insights", "business"]
+    },
+    {
+      "id": "analysis-research",
+      "title": "Research Synthesizer",
+      "description": "Synthesize research from multiple sources into coherent insights.",
+      "category": "analysis",
+      "model": "gpt-4",
+      "content": "Synthesize the following research about {{topic}}:\n{{sources}}\n\nPlease create:\n1. Executive summary\n2. Key themes and findings\n3. Methodology assessment\n4. Gaps in research\n5. Contradictions or debates\n6. Future research directions\n\nFocus area: {{focus}}\nFormat: {{format}}",
+      "variables": [
+        {
+          "name": "topic",
+          "description": "Research topic",
+          "defaultValue": "impact of remote work on productivity",
+          "required": true
+        },
+        {
+          "name": "sources",
+          "description": "Research sources or summaries",
+          "defaultValue": "Study 1: Stanford research showing 13% productivity increase\nStudy 2: Microsoft study showing collaboration challenges\nStudy 3: Gallup survey on employee satisfaction",
+          "required": true
+        },
+        {
+          "name": "focus",
+          "description": "Specific focus within the topic",
+          "defaultValue": "long-term effects on company culture",
+          "required": true
+        },
+        {
+          "name": "format",
+          "description": "Desired output format",
+          "defaultValue": "bullet points with supporting evidence",
+          "required": false
+        }
+      ],
+      "examples": [
+        "Synthesize the following research about impact of remote work on productivity:\nStudy 1: Stanford research showing 13% productivity increase\nStudy 2: Microsoft study showing collaboration challenges\nStudy 3: Gallup survey on employee satisfaction\n\nPlease create:\n1. Executive summary\n2. Key themes and findings\n3. Methodology assessment\n4. Gaps in research\n5. Contradictions or debates\n6. Future research directions\n\nFocus area: long-term effects on company culture\nFormat: bullet points with supporting evidence"
+      ],
+      "tags": ["analysis", "research", "synthesis", "academic"]
+    }
+  ]
+}
