@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)" rx="24" ry="24"/>
+
+  <g transform="translate(80, 120)">
+    <circle cx="60" cy="60" r="54" fill="url(#accent)" opacity="0.15"/>
+    <circle cx="60" cy="60" r="36" fill="url(#accent)" opacity="0.25"/>
+    <circle cx="60" cy="60" r="18" fill="url(#accent)"/>
+
+    <path d="M42 60 L54 72 L78 48" stroke="#ffffff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <text x="180" y="200" font-family="system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, sans-serif" font-size="88" font-weight="800" fill="#f8fafc" letter-spacing="-1.5">PromptCraft</text>
+  <text x="180" y="280" font-family="system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, sans-serif" font-size="36" font-weight="500" fill="#94a3b8" letter-spacing="0.2">Outcome-first prompts for every modern AI model.</text>
+
+  <rect x="80" y="360" width="1040" height="1" fill="#334155" rx="1"/>
+
+  <text x="180" y="450" font-family="system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="600" fill="#e2e8f0">Guides</text>
+  <text x="180" y="450" font-family="system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="600" fill="#6366f1" x="180" dy="0"> •</text>
+  <text x="320" y="450" font-family="system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="600" fill="#e2e8f0">Templates</text>
+  <text x="180" y="510" font-family="system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="600" fill="#e2e8f0">Lessons</text>
+  <text x="320" y="510" font-family="system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="600" fill="#6366f1" x="320" dy="0"> •</text>
+  <text x="470" y="510" font-family="system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, sans-serif" font-size="28" font-weight="600" fill="#e2e8f0">Optimizer</text>
+
+  <text x="80" y="580" font-family="system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="500" fill="#64748b">promptcraft.bossincrypto.dev</text>
+</svg>
