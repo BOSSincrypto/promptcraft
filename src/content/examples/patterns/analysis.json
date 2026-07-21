@@ -12,7 +12,8 @@
       "tags": ["data-analysis", "business", "sales", "strategy", "framework"],
       "likes": 31,
       "createdAt": 1721126400000,
-      "difficulty": "intermediate"
+      "difficulty": "intermediate",
+      "model": "gemini-3.5-pro"
     }
   ]
 }

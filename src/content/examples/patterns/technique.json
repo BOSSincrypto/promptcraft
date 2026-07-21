@@ -13,7 +13,8 @@
       "likes": 42,
       "createdAt": 1721472000000,
       "isFeatured": true,
-      "difficulty": "intermediate"
+      "difficulty": "intermediate",
+      "model": "gpt-5.5"
     }
   ]
 }

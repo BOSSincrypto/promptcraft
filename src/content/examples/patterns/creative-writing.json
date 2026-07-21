@@ -10,5 +10,6 @@
   "likes": 73,
   "createdAt": 1721212800000,
   "isFeatured": true,
-  "difficulty": "advanced"
+  "difficulty": "advanced",
+  "model": "gpt-5.6"
 }

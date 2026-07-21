@@ -10,5 +10,6 @@
   "likes": 56,
   "createdAt": 1721299200000,
   "isFeatured": true,
-  "difficulty": "intermediate"
+  "difficulty": "intermediate",
+  "model": "claude-fable-5"
 }

@@ -41,9 +41,9 @@ export function Prompts() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
-            <h1 className="text-3xl font-bold">Prompt Templates</h1>
+            <h1 className="text-3xl font-bold">Prompt Templates (2026 Edition)</h1>
             <p className="text-muted-foreground mt-2">
-              Discover and use professionally crafted prompts for various tasks
+              Outcome-first prompts engineered for GPT-5.5/5.6, Claude Fable 5/Sonnet 5, Gemini 3.5, and GPT Image 2.
             </p>
           </div>
           <Link to="/prompts/generator">

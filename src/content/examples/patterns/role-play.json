@@ -14,7 +14,7 @@
       "createdAt": 1721385600000,
       "isFeatured": true,
       "difficulty": "advanced",
-      "model": "claude-3.5-sonnet"
+      "model": "claude-fable-5"
     }
   ]
 }
